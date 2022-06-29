@@ -103,11 +103,11 @@ p {
         a {
             display: flex;
         }
-
+     
         button {
             padding: 0 60px;
             max-width: 90%;
-
+            
             height: 85px;
             border: none;
             background-color: #90A3A7;
@@ -184,7 +184,7 @@ p {
 
 #reviews {
     padding: 5vw !important;
-
+    
 
     display: flex;
     justify-content: center;
@@ -203,7 +203,7 @@ p {
     }
 
     .swiper-button {
-        object-fit: scale-down;
+        object-fit:scale-down;
         width: 40px;
         height: 40px;
     }
@@ -211,8 +211,7 @@ p {
     .swiper-slide {
         border-radius: 20px;
         padding: 60px;
-        background-color: rgba(174, 207, 216, 0.5);
-        ;
+        background-color: rgba(174, 207, 216, 0.5);;
     }
 
     .swiper-pagination-bullet {
@@ -287,7 +286,7 @@ p {
         padding: 60px;
     }
 
-    .info-title {
+    .info-title { 
         font-family: $raleway;
         font-style: normal;
         font-weight: 500;
@@ -298,30 +297,26 @@ p {
         margin-right: 20px;
     }
 
-    .icon {
+    .icon { 
         width: 35px;
         height: 35px;
         object-fit: scale-down;
         margin-right: 20px;
     }
 
-    .phone,
-    .location,
-    .numbers,
-    .locations {
+    .phone, .location, .numbers, .locations  { 
         display: flex;
         // justify-content: space-evenly;
 
-        .numbers,
-        .locations {
+        .numbers, .locations {
             flex-direction: column;
         }
     }
 }
 
-footer {
+footer { 
     width: 100%;
-    height: 120px;
+    height: 120px;  
     background-color: #333;
     padding: 40px;
 
@@ -330,14 +325,11 @@ footer {
         justify-content: space-between;
         flex-direction: row;
         box-sizing: border-box;
-
-        .right a,
-        p {
+    
+        .right a, p {
             color: white;
         }
-
-        .right a,
-        .right a:hover {
+        .right a, .right a:hover {
             cursor: pointer;
             color: white;
 
@@ -350,9 +342,7 @@ footer {
             line-height: 130%;
 
             margin-bottom: 20px;
-        }
-
-        ;
+        };
     }
 
     .right {
@@ -362,60 +352,132 @@ footer {
     }
 }
 
-.services {
-    position: fixed;
-    top: 75px;
-    right: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 100;
-    display: flex;
-    transition: 0.3s;
+.hide {
+   display: none;
+   width: 0;
+   height: 0;
 
-    .popup.open {
-        right: 0;
+} 
+
+    .noscroll {
+        overflow: hidden;
     }
 
-    .menu {
+
+.service-modal {
+    z-index: 200000 !important;
+
+    animation: all 200ms ease;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow-y: scroll;
+
+
+    box-sizing: border-box;
+
+    width: 100%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    padding: 40px;
+
+    .service-window {
+        z-index: 200000 !important;
+
         width: 100%;
-        height: 100%;
+        // height: 100%;
+
+        box-sizing: border-box;
+        background-color: #AECFD8;
+
+        padding: 35px;
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: start;
-        padding: 50px 0;
-        overflow: auto;
+        justify-content: center;
 
-        li {
+        .top-bar {
+            display: flex;
+            justify-content: center;
+        }
+        
+
+        p {
+            font-family: $raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+
+            justify-self: center;
+            align-self: center;
+
+            text-align: center;
+
+            width: 60%;
+        }
+
+        .service-list {
+            background-color: #E9EDEA;
+            border-radius: 25px;
+
             width: 100%;
+            height: 100%;
 
-            a {
-                width: 100%;
+            padding: 35px;
+
+            span {
+                    font-family: $raleway;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 25px;
+                    line-height: 130%;
+
+                    color: #333333;
+
+                }
+
+            .service-item {
+                margin-bottom: 20px;
+
                 display: flex;
-                justify-content: center;
-                padding: 20px 0;
-                font-size: 20px;
-                font-weight: bold;
-                color: #3f3f3f;
 
-                font-size: 25px;
-                font-family: "Rubik", sans-serif;
-                font-weight: bolder;
+                img {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 15px;
+                }
+                
             }
+
+            .pl {
+                    padding-left: 35px !important;
+                }
+        }
+
+        .cross { 
+            position: absolute;
+
+            top: 60px;
+            right: 60px;
+            cursor: pointer;
         }
     }
+
 }
 
 
 @media (max-width: 767px) {
     .inner-padding:not(#first) {
-        padding-top: 45px;
-        padding-left: 45px;
-        padding-right: 45px;
-        box-sizing: border-box !important;
-    }
-
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    box-sizing: border-box !important;
+}
     #first {
         display: flex;
         flex-direction: column;
@@ -435,21 +497,17 @@ footer {
             max-width: 80vw;
             font-size: 25px !important;
             margin-right: 0 !important;
-            padding: 0 45px !important;
+            padding: 0 45px !important;   
         }
 
-        h1,
-        p,
-        button {
+        h1 , p , button {
             margin-right: 6vw !important;
             // box-sizing: border-box !important;
         }
+       .main_left {
+                box-sizing: border-box !important;
 
-        .main_left {
-            box-sizing: border-box !important;
-
-        }
-
+        } 
         .inner-padding {
             display: flex;
             flex-direction: column;
@@ -476,9 +534,7 @@ footer {
 
     #third {
         padding-bottom: 8vw;
-
-        p,
-        h3 {
+        p, h3 {
             text-align: right;
         }
 
@@ -507,17 +563,15 @@ footer {
         margin-bottom: 40px;
 
         .iframe-wrapper {
-            // display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
     }
 
     #maps {
-
-        .phone,
-        .location {
+        .phone, .location {
             flex-wrap: wrap;
             justify-content: center;
 

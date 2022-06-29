@@ -248,20 +248,10 @@ p {
      object-fit: scale-down;
   margin-right: 20px;
 }
-#maps .phone,
-#maps .location,
-#maps .numbers,
-#maps .locations {
+#maps .phone, #maps .location, #maps .numbers, #maps .locations {
   display: flex;
 }
-#maps .phone .numbers,
-#maps .phone .locations,
-#maps .location .numbers,
-#maps .location .locations,
-#maps .numbers .numbers,
-#maps .numbers .locations,
-#maps .locations .numbers,
-#maps .locations .locations {
+#maps .phone .numbers, #maps .phone .locations, #maps .location .numbers, #maps .location .locations, #maps .numbers .numbers, #maps .numbers .locations, #maps .locations .numbers, #maps .locations .locations {
   flex-direction: column;
 }
 
@@ -277,12 +267,10 @@ footer .inner {
   flex-direction: row;
   box-sizing: border-box;
 }
-footer .inner .right a,
-footer .inner p {
+footer .inner .right a, footer .inner p {
   color: white;
 }
-footer .inner .right a,
-footer .inner .right a:hover {
+footer .inner .right a, footer .inner .right a:hover {
   cursor: pointer;
   color: white;
   text-decoration: underline;
@@ -297,44 +285,88 @@ footer .right span {
   text-transform: uppercase;
 }
 
-.services {
+.hide {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.service-modal {
+  z-index: 200000 !important;
+  -webkit-animation: all 200ms ease;
+          animation: all 200ms ease;
   position: fixed;
-  top: 75px;
-  right: -100%;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  box-sizing: border-box;
   width: 100%;
-  height: 100%;
-  background-color: #fff;
-  z-index: 100;
-  display: flex;
-  transition: 0.3s;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 40px;
 }
-.services .popup.open {
-  right: 0;
-}
-.services .menu {
+.service-modal .service-window {
+  z-index: 200000 !important;
   width: 100%;
-  height: 100%;
+  box-sizing: border-box;
+  background-color: #AECFD8;
+  padding: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  padding: 50px 0;
-  overflow: auto;
+  justify-content: center;
 }
-.services .menu li {
-  width: 100%;
-}
-.services .menu li a {
-  width: 100%;
+.service-modal .service-window .top-bar {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+}
+.service-modal .service-window p {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 500;
   font-size: 20px;
-  font-weight: bold;
-  color: #3f3f3f;
+  line-height: 130%;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  width: 60%;
+}
+.service-modal .service-window .service-list {
+  background-color: #E9EDEA;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  padding: 35px;
+}
+.service-modal .service-window .service-list span {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 25px;
-  font-family: "Rubik", sans-serif;
-  font-weight: bolder;
+  line-height: 130%;
+  color: #333333;
+}
+.service-modal .service-window .service-list .service-item {
+  margin-bottom: 20px;
+  display: flex;
+}
+.service-modal .service-window .service-list .service-item img {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+.service-modal .service-window .service-list .pl {
+  padding-left: 35px !important;
+}
+.service-modal .service-window .cross {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -363,9 +395,7 @@ footer .right span {
     margin-right: 0 !important;
     padding: 0 45px !important;
   }
-  #first h1,
-#first p,
-#first button {
+  #first h1, #first p, #first button {
     margin-right: 6vw !important;
   }
   #first .main_left {
@@ -392,8 +422,7 @@ footer .right span {
   #third {
     padding-bottom: 8vw;
   }
-  #third p,
-#third h3 {
+  #third p, #third h3 {
     text-align: right;
   }
   #third img {
@@ -420,13 +449,11 @@ footer .right span {
     width: 100%;
   }
 
-  #maps .phone,
-#maps .location {
+  #maps .phone, #maps .location {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #maps .phone p,
-#maps .location p {
+  #maps .phone p, #maps .location p {
     text-align: center;
   }
 
