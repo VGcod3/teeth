@@ -248,10 +248,20 @@ p {
      object-fit: scale-down;
   margin-right: 20px;
 }
-#maps .phone, #maps .location, #maps .numbers, #maps .locations {
+#maps .phone,
+#maps .location,
+#maps .numbers,
+#maps .locations {
   display: flex;
 }
-#maps .phone .numbers, #maps .phone .locations, #maps .location .numbers, #maps .location .locations, #maps .numbers .numbers, #maps .numbers .locations, #maps .locations .numbers, #maps .locations .locations {
+#maps .phone .numbers,
+#maps .phone .locations,
+#maps .location .numbers,
+#maps .location .locations,
+#maps .numbers .numbers,
+#maps .numbers .locations,
+#maps .locations .numbers,
+#maps .locations .locations {
   flex-direction: column;
 }
 
@@ -267,10 +277,12 @@ footer .inner {
   flex-direction: row;
   box-sizing: border-box;
 }
-footer .inner .right a, footer .inner p {
+footer .inner .right a,
+footer .inner p {
   color: white;
 }
-footer .inner .right a, footer .inner .right a:hover {
+footer .inner .right a,
+footer .inner .right a:hover {
   cursor: pointer;
   color: white;
   text-decoration: underline;
@@ -395,7 +407,9 @@ footer .right span {
     margin-right: 0 !important;
     padding: 0 45px !important;
   }
-  #first h1, #first p, #first button {
+  #first h1,
+#first p,
+#first button {
     margin-right: 6vw !important;
   }
   #first .main_left {
@@ -422,7 +436,8 @@ footer .right span {
   #third {
     padding-bottom: 8vw;
   }
-  #third p, #third h3 {
+  #third p,
+#third h3 {
     text-align: right;
   }
   #third img {
@@ -449,15 +464,44 @@ footer .right span {
     width: 100%;
   }
 
-  #maps .phone, #maps .location {
+  #maps .phone,
+#maps .location {
     flex-wrap: wrap;
     justify-content: center;
   }
-  #maps .phone p, #maps .location p {
+  #maps .phone p,
+#maps .location p {
     text-align: center;
   }
 
   footer p {
     font-size: small;
+  }
+
+  .service-modal {
+    padding: 15px;
+  }
+  .service-modal .service-window {
+    padding: 30px;
+  }
+  .service-modal .service-window .top-bar p {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .service-modal .service-window .top-bar .cross {
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    right: 25px;
+  }
+  .service-modal .service-window .service-list {
+    padding: 15px;
+  }
+  .service-modal .service-window .service-list .service-item span {
+    font-size: 20px;
+  }
+  .service-modal .service-window .service-list .service-item img {
+    width: 20px;
+    height: 20px;
   }
 }

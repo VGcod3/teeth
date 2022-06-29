@@ -103,11 +103,11 @@ p {
         a {
             display: flex;
         }
-     
+
         button {
             padding: 0 60px;
             max-width: 90%;
-            
+
             height: 85px;
             border: none;
             background-color: #90A3A7;
@@ -184,7 +184,7 @@ p {
 
 #reviews {
     padding: 5vw !important;
-    
+
 
     display: flex;
     justify-content: center;
@@ -203,7 +203,7 @@ p {
     }
 
     .swiper-button {
-        object-fit:scale-down;
+        object-fit: scale-down;
         width: 40px;
         height: 40px;
     }
@@ -211,7 +211,8 @@ p {
     .swiper-slide {
         border-radius: 20px;
         padding: 60px;
-        background-color: rgba(174, 207, 216, 0.5);;
+        background-color: rgba(174, 207, 216, 0.5);
+        ;
     }
 
     .swiper-pagination-bullet {
@@ -286,7 +287,7 @@ p {
         padding: 60px;
     }
 
-    .info-title { 
+    .info-title {
         font-family: $raleway;
         font-style: normal;
         font-weight: 500;
@@ -297,26 +298,30 @@ p {
         margin-right: 20px;
     }
 
-    .icon { 
+    .icon {
         width: 35px;
         height: 35px;
         object-fit: scale-down;
         margin-right: 20px;
     }
 
-    .phone, .location, .numbers, .locations  { 
+    .phone,
+    .location,
+    .numbers,
+    .locations {
         display: flex;
         // justify-content: space-evenly;
 
-        .numbers, .locations {
+        .numbers,
+        .locations {
             flex-direction: column;
         }
     }
 }
 
-footer { 
+footer {
     width: 100%;
-    height: 120px;  
+    height: 120px;
     background-color: #333;
     padding: 40px;
 
@@ -325,11 +330,14 @@ footer {
         justify-content: space-between;
         flex-direction: row;
         box-sizing: border-box;
-    
-        .right a, p {
+
+        .right a,
+        p {
             color: white;
         }
-        .right a, .right a:hover {
+
+        .right a,
+        .right a:hover {
             cursor: pointer;
             color: white;
 
@@ -342,7 +350,9 @@ footer {
             line-height: 130%;
 
             margin-bottom: 20px;
-        };
+        }
+
+        ;
     }
 
     .right {
@@ -353,15 +363,14 @@ footer {
 }
 
 .hide {
-   display: none;
-   width: 0;
-   height: 0;
+    display: none;
+    width: 0;
+    height: 0;
+}
 
-} 
-
-    .noscroll {
-        overflow: hidden;
-    }
+.noscroll {
+    overflow: hidden;
+}
 
 
 .service-modal {
@@ -404,7 +413,7 @@ footer {
             display: flex;
             justify-content: center;
         }
-        
+
 
         p {
             font-family: $raleway;
@@ -431,15 +440,15 @@ footer {
             padding: 35px;
 
             span {
-                    font-family: $raleway;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 25px;
-                    line-height: 130%;
+                font-family: $raleway;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 130%;
 
-                    color: #333333;
+                color: #333333;
 
-                }
+            }
 
             .service-item {
                 margin-bottom: 20px;
@@ -451,15 +460,15 @@ footer {
                     height: 25px;
                     margin-right: 15px;
                 }
-                
+
             }
 
             .pl {
-                    padding-left: 35px !important;
-                }
+                padding-left: 35px !important;
+            }
         }
 
-        .cross { 
+        .cross {
             position: absolute;
 
             top: 60px;
@@ -473,11 +482,12 @@ footer {
 
 @media (max-width: 767px) {
     .inner-padding:not(#first) {
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-right: 45px;
-    box-sizing: border-box !important;
-}
+        padding-top: 45px;
+        padding-left: 45px;
+        padding-right: 45px;
+        box-sizing: border-box !important;
+    }
+
     #first {
         display: flex;
         flex-direction: column;
@@ -497,17 +507,21 @@ footer {
             max-width: 80vw;
             font-size: 25px !important;
             margin-right: 0 !important;
-            padding: 0 45px !important;   
+            padding: 0 45px !important;
         }
 
-        h1 , p , button {
+        h1,
+        p,
+        button {
             margin-right: 6vw !important;
             // box-sizing: border-box !important;
         }
-       .main_left {
-                box-sizing: border-box !important;
 
-        } 
+        .main_left {
+            box-sizing: border-box !important;
+
+        }
+
         .inner-padding {
             display: flex;
             flex-direction: column;
@@ -534,7 +548,9 @@ footer {
 
     #third {
         padding-bottom: 8vw;
-        p, h3 {
+
+        p,
+        h3 {
             text-align: right;
         }
 
@@ -563,15 +579,17 @@ footer {
         margin-bottom: 40px;
 
         .iframe-wrapper {
-        // display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
     }
 
     #maps {
-        .phone, .location {
+
+        .phone,
+        .location {
             flex-wrap: wrap;
             justify-content: center;
 
@@ -584,6 +602,48 @@ footer {
     footer {
         p {
             font-size: small;
+        }
+    }
+
+    
+    .service-modal {
+        padding: 15px;
+
+        .service-window {
+            padding: 30px;
+
+            .top-bar {
+                p {
+                    margin-top: 20px;
+                    width: 100%;
+                }
+
+                .cross {
+                    width: 25px;
+                    height: 25px;
+                    top: 25px;
+                    right: 25px;
+                }
+            }
+
+            .service-list {
+                padding: 15px;
+
+                .service-item {
+
+                    span {
+                        font-size: 20px;
+                    }
+
+                     img {
+                    width: 20px;
+                    height: 20px;
+
+                }
+                }
+
+               
+            }
         }
     }
 }

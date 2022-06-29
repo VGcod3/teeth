@@ -25,13 +25,12 @@ const modalF = () => {
 
     function showModal() {
         modal.classList.remove('hide')
-        body.classList.add("noscroll");
+        body.classList.add("noscroll")
     }
 
     function hideModal() {
         modal.classList.add('hide')
         body.classList.remove("noscroll")
-
     }
 }
 
